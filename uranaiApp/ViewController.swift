@@ -51,10 +51,10 @@ class ViewController: UIViewController {
         //生年月日で占うよん
         //余りで占い結果分けます
         //6で割って、余りの数を出します
-        let born = (year + month + day) % 6
+        let born = (year + month + day) % 4
         
         //ラッキーカラー
-        let luckyColer = ["ピンク","みどり","水色","黒","レインボー","オレンジ"]
+        let luckyColer = ["ピンク","みどり","水色","黒"]
         
         //余りが０の場合
         if  born == 0 {
@@ -66,15 +66,11 @@ class ViewController: UIViewController {
         } else if born == 2 {
             kekka.text! = "あなたのラッキーカラーは\(luckyColer[2])です。"
             
-        } else if born == 3 {
-            kekka.text! = "あなたのラッキーカラーは\(luckyColer[3])です。"
-            
-        } else if born == 4 {
-           kekka.text! = "あなたのラッキーカラーは\(luckyColer[4])です。"
-            
         } else {
-            kekka.text! = "あなたのラッキーカラーは\(luckyColer[5])です。"
+            kekka.text! = "あなたのラッキーカラーは\(luckyColer[3])です。"
         }
+            
+       
         
         
         //血液型で占うよ
@@ -89,13 +85,30 @@ class ViewController: UIViewController {
            kekka.text! += "あなたは\(liketipe[1])と恋に落ちます。"
             // O型の場合
         } else if BladType == 2 {
-            kekka.text! += "あなたは\(liketipe[1])と恋に落ちます。"
+            kekka.text! += "あなたは\(liketipe[2])と恋に落ちます。"
             // AB型の場合
         } else {
-            kekka.text! += "あなたは\(liketipe[1])と恋に落ちます。"
+            kekka.text! += "あなたは\(liketipe[3])と恋に落ちます。"
         }
         
-       
+        
+        //数字で占うよん
+        
+        let number = Int(String(numLabel.text!))! % 4
+        
+        let unn = ["金運が上がります","金運が下がります","賭け運が上がります","賭け運が下がります"]
+        
+        
+        if number == 0 {
+            kekka.text! += "今年は\(unn[0])。"
+        } else if number == 1 {
+            kekka.text! += "今年は\(unn[1])。"
+        } else if number == 2 {
+            kekka.text! += "今年は\(unn[2])。"
+        } else {
+            kekka.text! += "今年は\(unn[3])。"
+        }
+        
         
         
         

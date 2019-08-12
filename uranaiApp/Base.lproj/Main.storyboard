@@ -63,6 +63,9 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cLV-9V-KzC">
                                 <rect key="frame" x="-2" y="552" width="418" height="31"/>
+                                <connections>
+                                    <action selector="numbar:" destination="BYZ-38-t0r" eventType="valueChanged" id="3fK-RX-Wgh"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好きな数を指定してください" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3B-ag-tym">
                                 <rect key="frame" x="0.0" y="502" width="414" height="30"/>
@@ -90,6 +93,9 @@
                                 <state key="normal" title="占う">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="uranauBotton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GSE-rH-HQd"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-Qe-Ni7">
                                 <rect key="frame" x="0.0" y="707" width="414" height="155"/>
@@ -134,6 +140,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bladType" destination="hZn-o3-9v0" id="29z-iG-qrg"/>
+                        <outlet property="datePicker" destination="9fN-iN-KRD" id="Mr1-U2-rYT"/>
+                        <outlet property="kekka" destination="Mgj-Qe-Ni7" id="s4U-sB-ado"/>
+                        <outlet property="numLabel" destination="g3a-nA-kyC" id="8VP-lT-MGV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
